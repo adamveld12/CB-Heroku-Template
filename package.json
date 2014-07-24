@@ -1,0 +1,33 @@
+{
+  "name": "blog",
+  "version": "0.0.0",
+  "description": "Adam's blog site",
+  "main": "\"\"",
+  "scripts": {
+    "test": "\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "\""
+  },
+  "keywords": [
+    "Blog",
+    "Adam",
+    "Erlang",
+    "ChicagoBoss"
+  ],
+  "author": "Adam Veldhousen",
+  "license": "MIT",
+  "dependencies": {
+    "karma": "^0.12.17",
+    "mimosa": "^2.2.18"
+  },
+  "devDependencies": {
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-jasmine": "^0.1.5",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-requirejs": "^0.2.2",
+    "requirejs": "^2.1.14"
+  }
+}

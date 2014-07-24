@@ -1,0 +1,21 @@
+# dirs
+ebin
+deps
+log
+node_modules
+priv/static
+priv/assets/vendor
+.mimosa
+Mnesia.myapp*
+
+
+*.log
+./**/*.DS_Store
+thumbs.db
+.eunit
+deps
+*.o
+*.beam
+*.plt
+erl_crash.dump
+

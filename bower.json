@@ -1,0 +1,32 @@
+{
+  "name": "blog",
+  "version": "0.0.0",
+  "authors": [
+    "Adam Veldhousen <adamveld12@gmail.com>"
+  ],
+  "description": "Blog site",
+  "main": "'",
+  "keywords": [
+    "Blog",
+    "Adam",
+    "ChicagoBoss"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "angular": "~1.2.20",
+    "jquery": "~2.1.1",
+    "lodash": "~2.4.1",
+    "ngAnimate-animate.css": "~0.1.1",
+    "requirejs": "~2.1.14",
+    "angular-route": "~1.2.20"
+  }
+}

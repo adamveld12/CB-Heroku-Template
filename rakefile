@@ -1,0 +1,75 @@
+require 'rake/clean'
+
+CLOBBER.include 'deps', 'priv/assets/vendor', 'node_modules'
+CLEAN.include 'priv/static', 'logs'
+
+task :default => ['install:npm', 'install:server', 'install:client', 'dev']
+task :dev => ['build:assets', 'run:server']
+task :deploy => ["deploy:server"]
+task 'assets:precompile' => ['build:assets']
+
+namespace :deploy do
+
+  task :server do 
+  end
+
+end
+
+namespace :run do
+
+  desc 'runs the server'
+  task :server => ['build:server'] do
+    sh './init.sh stop'
+    sh './init.sh start-dev'
+  end
+
+  desc 'runs content watch'
+  task :watch do
+    node MIMOSA, 'watch -sd'
+  end
+
+  task :server_tests do
+    puts "no eunit tests"
+  end
+
+  task :client_tests do
+    node KARMA
+  end
+
+end
+
+namespace :build do
+
+  task :server do
+    sh "#{REBAR} compile"
+  end
+
+  task :assets do
+    node MIMOSA, 'build -D'
+  end
+
+end
+
+namespace :install do
+
+  task :npm do
+    sh "npm install"
+  end
+
+  task :server do
+    sh "#{REBAR} get-deps"
+  end
+
+  task :client do
+    node MIMOSA, 'bower -D'
+  end
+
+end
+
+def node(executable, args) 
+  sh "node #{executable} #{args}"
+end
+
+MIMOSA = "node_modules/mimosa/bin/mimosa"
+KARMA = "node_modules/karma/bin/karma"
+REBAR = "./rebar"
