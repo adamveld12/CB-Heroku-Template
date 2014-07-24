@@ -9,11 +9,14 @@ Chicago Boss Heroku Project Template
 
 #### What you'll need ####
 
-1. [Heroku Toolbelt] (Heroku Toolbelt)
+1. [Heroku Toolbelt] (https://toolbelt.heroku.com/)
 
-2. [Node] (Node)
+2. [Node] (http://nodejs.org/)
 
-3. [Ruby] (Ruby)
+3. [Ruby] (https://www.ruby-lang.org/en/)
+
+4. [Erlang/OTP] (http://www.erlang.org/download.html)
+
 
 #### How to use ####
 
@@ -26,7 +29,7 @@ heroku apps:create <appname> --buildpack https://github.com/ddollar/heroku-build
 
 #### Notes ####
 
-  This uses a slightly customized version of the [Chicago Boss Buildpack] (Chicago Boss Buildpack) that supports mongoDb and postgres. 
+  This uses a slightly customized version of the [Chicago Boss Buildpack] (https://github.com/adamveld12/heroku-buildpack-chicagoboss) that supports mongoDb and postgres. 
   More coming if I'm bothered enough.
 
 
@@ -34,7 +37,3 @@ heroku apps:create <appname> --buildpack https://github.com/ddollar/heroku-build
 
 MIT 
 
-[Chicago Boss Buildpack]:[https://github.com/adamveld12/heroku-buildpack-chicagoboss]
-[Heroku Toolbelt]:[https://toolbelt.heroku.com/]
-[Node]:[http://nodejs.org/]
-[Ruby]:[https://www.ruby-lang.org/en/]
